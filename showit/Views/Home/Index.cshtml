@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    var names = (List<string>)ViewBag.Names;
+}
+
+<h2>
+    @ViewBag.data1<h2>
+        <h2>
+            @ViewData["data1"]<h2>
+                <ul>
+                    @foreach (var name in names)
+                    {
+                        <li>@name</li>
+                    }
+                </ul>
+

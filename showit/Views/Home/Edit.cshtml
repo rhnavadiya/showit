@@ -1,0 +1,24 @@
+﻿@using showit.Models
+@model Student
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@Html.LabelFor(model => model.StudentId) @Html.TextBoxFor(model => model.StudentId) </br>
+
+@Html.LabelFor(model => model.StudentName) @Html.TextBoxFor(model => model.StudentName) </br>
+
+@Html.LabelFor(model => model.Age) @Html.TextBoxFor(model => model.Age) </br>
+
+@Html.LabelFor(model => model.Password) @Html.TextBoxFor(model => model.Password) </br>
+
+@Html.LabelFor(model => model.isActive)@Html.CheckBoxFor(model => model.isActive)
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
