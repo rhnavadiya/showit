@@ -14,9 +14,10 @@ namespace showit.Controllers
         }
         public IActionResult Index()
         {
-            ViewBag.abc = "I am ViewBag data";//view bag data
+            ViewBag.data = "I am ViewBag data";//view bag data
             ViewData["data1"] = "I am ViewBag data";//view data
             ViewBag.Names = new List<string> { "Alice", "Bob", "Charlie" };
+            TempData["name"] = "Bill";
             return View();
         }
 
@@ -52,11 +53,6 @@ namespace showit.Controllers
             var student = new Student();    
             return View(student);
         }
-
-
-
-       
-
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
